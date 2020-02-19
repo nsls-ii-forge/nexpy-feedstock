@@ -1,37 +1,38 @@
 {% set name = "nexpy" %}
 {% set version = "0.12.4" %}
+{% set sha256 = "f3d040a7f8f954ba2cca890cc534d77945993710ea50964a60c568b147b7ecd4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/NeXpy-{{ version }}.tar.gz"
-  sha256: f3d040a7f8f954ba2cca890cc534d77945993710ea50964a60c568b147b7ecd4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/NeXpy-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
+  noarch: python
   entry_points:
     - nexpy = nexpy.nexpygui:main
-  noarch: "python"
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
     - numpy
+    - pip
+    - setuptools
   run:
+    - python
     - ansi2html
     - h5py
-    - qtconsole
     - ipython
     - matplotlib
     - nexusformat >=0.5.1
     - numpy
     - pillow
-    - python
+    - qtconsole
     - scipy
 
 test:
@@ -48,15 +49,10 @@ test:
     - nexpy --help
 
 about:
-  home: "http://nexpy.github.io/nexpy/"
-  license: "BSD-3-Clause"
-  license_family: "BSD"
-  license_file: "COPYING"
-  summary: "NeXpy: A Python GUI to analyze NeXus data"
-  doc_url: "https://nexpy.github.io/nexpy/"
-  dev_url: "https://github.com/nexpy/nexpy"
-
-extra:
-  recipe-maintainers:
-    - tschoonj
-    - rayosborn
+  home: http://nexpy.github.io/nexpy
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: COPYING
+  summary: NeXpy: A Python GUI to analyze NeXus data
+  doc_url: https://nexpy.github.io/nexpy
+  dev_url: https://github.com/nexpy/nexpy
