@@ -1,0 +1,18 @@
+commit 6e6c67d52dc943981204a073f6a15be21a1c668d
+Author: Tom Schoonjans <Tom.Schoonjans@diamond.ac.uk>
+Date:   Thu Nov 7 09:07:24 2019 +0000
+
+    Fix toolbar on macOS
+
+diff --git a/src/nexpy/gui/consoleapp.py b/src/nexpy/gui/consoleapp.py
+index eb5c29a..bc4bc34 100644
+--- a/src/nexpy/gui/consoleapp.py
++++ b/src/nexpy/gui/consoleapp.py
+@@ -360,7 +360,6 @@ class NXConsoleApp(JupyterApp, JupyterConsoleApp):
+ 
+         # draw the window
+         self.window.show()
+-        self.window.raise_()
+ 
+         # Start the application main loop.
+         self.app.exec_()
