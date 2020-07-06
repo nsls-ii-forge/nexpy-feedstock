@@ -47,6 +47,7 @@ test:
     - nexpy.readers
   commands:
     - nexpy --help
+    - nexpy --version
 
 about:
   home: http://nexpy.github.io/nexpy
