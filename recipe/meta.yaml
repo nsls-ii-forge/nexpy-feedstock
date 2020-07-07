@@ -1,6 +1,6 @@
-{% set name = "nexpy" %}
-{% set version = "0.12.4" %}
-{% set sha256 = "f3d040a7f8f954ba2cca890cc534d77945993710ea50964a60c568b147b7ecd4" %}
+{% set name = "NeXpy" %}
+{% set version = "0.12.6" %}
+{% set sha256 = "bfe7ead73cf2c243320ee0c510d84abb665e6f6def164b93ab4b01eedffe5211" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ build:
   noarch: python
   entry_points:
     - nexpy = nexpy.nexpygui:main
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -47,6 +47,7 @@ test:
     - nexpy.readers
   commands:
     - nexpy --help
+    - nexpy --version
 
 about:
   home: http://nexpy.github.io/nexpy
