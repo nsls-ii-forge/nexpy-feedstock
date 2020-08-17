@@ -1,6 +1,6 @@
 {% set name = "NeXpy" %}
-{% set version = "0.12.6" %}
-{% set sha256 = "bfe7ead73cf2c243320ee0c510d84abb665e6f6def164b93ab4b01eedffe5211" %}
+{% set version = "0.12.7" %}
+{% set sha256 = "477d27b45d71467e28d77b998cc78cfdff018fc5aad390735624a65928bd124c" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - nexpy = nexpy.nexpygui:main
@@ -54,6 +54,6 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING
-  summary: "NeXpy: A Python GUI to analyze NeXus data"
+  summary: 'NeXpy: A Python GUI to analyze NeXus data'
   doc_url: https://nexpy.github.io/nexpy
   dev_url: https://github.com/nexpy/nexpy
