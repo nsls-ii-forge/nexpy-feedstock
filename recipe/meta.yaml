@@ -27,12 +27,17 @@ requirements:
     - python
     - ansi2html
     - h5py
+    - ipykernel >=5.2.0
     - ipython
+    - lmfit
     - matplotlib
-    - nexusformat >=0.5.1
+    - nexusformat >=0.5.3
     - numpy
     - pillow
+    - pylatexenc
+    - pyqt <=5.13
     - qtconsole
+    - qtpy
     - scipy
 
 test:
