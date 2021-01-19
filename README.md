@@ -5,11 +5,13 @@ Home: http://nexpy.github.io/nexpy
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/nexpy-feedstock/blob/master/LICENSE.txt)
 
 Summary: NeXpy: A Python GUI to analyze NeXus data
 
+Development: https://github.com/nexpy/nexpy
 
+Documentation: https://nexpy.github.io/nexpy
 
 Current build status
 ====================
