@@ -1,6 +1,6 @@
 {% set name = "NeXpy" %}
-{% set version = "0.13.2" %}
-{% set sha256 = "7902424cc9724ff9d26399be4c29dfefa23e88ce3de88b5c1ce6d2a8853ecb8a" %}
+{% set version = "0.13.3" %}
+{% set sha256 = "6f8c05288488381f651833e49b1664c2d82bfc4a9387f679465cc0897ec4728a" %}
 
 package:
   name: {{ name|lower }}
